@@ -20,7 +20,7 @@ namespace viktorFunctionApp.Functions
         }
 
         // Input id for the product you want ot update as a parameter.
-        // In the body you can update Name and Price. Input the new values and thats it.
+        // In the body you can update Name and Price, update the values you want to update and that's it.
         [Function("UpdateProductById")]
         public async Task<IActionResult> UpdateProductById([HttpTrigger(AuthorizationLevel.Function, "put", Route = "product/{id}")] HttpRequest req, Guid id)
         {

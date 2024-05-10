@@ -19,6 +19,7 @@ namespace viktorFunctionApp.Functions
         }
 
         //Create Product
+        //You need to input Name and Price into the body when creating a new product
         [Function("AddProduct")]
         public async Task<IActionResult> addProduct([HttpTrigger(AuthorizationLevel.Function, "post", Route = "product")] HttpRequest req)
         {

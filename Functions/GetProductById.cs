@@ -18,7 +18,7 @@ namespace viktorFunctionApp.Functions
         }
 
         //Get by ID
-        // Input id for the product you want ot get as a parameter.
+        // Input id for the product you want to get as a parameter.
         [Function("GetProductById")]
         public async Task<IActionResult> getProductById([HttpTrigger(AuthorizationLevel.Function, "get", Route = "product/{id}")] HttpRequest req, Guid id)
         {
