@@ -17,10 +17,6 @@ var host = new HostBuilder()
             .AddEnvironmentVariables();
 
         IConfiguration configuration = configBuilder.Build();
-
-        //var KeyVaultUrl = new Uri(Environment.GetEnvironmentVariable("keyVaultUrl"));
-        //var secretClient = new SecretClient(KeyVaultUrl, new DefaultAzureCredential());
-
         string sqlConnectionString = configuration.GetConnectionString("SqlConnection");
 
         services.AddDbContext<AppDbContext>(options =>
